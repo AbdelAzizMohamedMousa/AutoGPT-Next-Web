@@ -1,81 +1,35 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-/* Used for the background effect in the landing page */
-.background {
-  background-image: radial-gradient(
-    circle,
-    rgba(58, 58, 58, 0.75) 2px,
-    transparent 0px
-  );
-  background-size: 30px 30px;
-  background-position: 0 0, 15px 15px;
-}
-
-.lower-gradient {
-  background-image: linear-gradient(
-    to top,
-    rgba(255, 255, 255, 0.03),
-    rgba(255, 255, 255, 0)
-  );
-  height: 20vh;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-
-/* Used for code / table formatting within messages */
-pre {
-  @apply overflow-auto rounded-lg;
-}
-
-.window-heights {
-  @apply h-[14em] overflow-y-auto overflow-x-hidden sm-h:h-[17em] md-h:h-[22em] lg-h:h-[30em];
-}
-
-table {
-  @apply w-full rounded-lg text-white;
-  background-color: #0d1117;
-}
-
-th,
-td {
-  @apply rounded-lg border border-gray-700 px-4 py-2;
-}
-
-th {
-  background-color: #161b22;
-}
-
-tr:nth-child(even) {
-  background-color: #1c2028;
-}
-
-/* Customize website's scrollbar like Mac OS
-Not supports in Firefox and IE */
-/* total width */
-div::-webkit-scrollbar {
-  border-radius: 16px;
-  background-color: #464649;
-  width: 16px;
-}
-
-/* background of the scrollbar except button or resizer */
-div::-webkit-scrollbar-track {
-  border-radius: 16px;
-  background-color: #464649;
-}
-
-/* scrollbar itself */
-div::-webkit-scrollbar-thumb {
-  background-color: #babac0;
-  border-radius: 16px;
-  border: 2px solid #464649;
-}
-
-/* set button(top and bottom of the scrollbar) */
-div::-webkit-scrollbar-button {
-  display: none;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>My Website</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.21/tailwind.min.css">
+</head>
+<body>
+  <div class="bg-gray-700">
+    <nav class="bg-white shadow-md">
+      <div class="container mx-auto flex justify-between items-center">
+        <a href="/" class="text-xl font-bold text-gray-800">My Website</a>
+        <div class="flex items-center">
+          <a href="/login" class="text-sm text-gray-500">Login</a>
+          <a href="/signup" class="text-sm text-gray-500">Sign Up</a>
+        </div>
+      </div>
+    </nav>
+    <main class="container mx-auto py-5">
+      <div class="bg-white shadow-md rounded-lg">
+        <h1 class="text-center text-xl font-bold text-gray-800">My Website</h1>
+        <p class="text-center text-md text-gray-600">This is my website.</p>
+      </div>
+    </main>
+    <footer class="bg-gray-700 py-5">
+      <div class="container mx-auto flex justify-between items-center">
+        <p class="text-sm text-gray-500">Copyright &copy; 2023 My Website</p>
+        <a href="/contact" class="text-sm text-gray-500">Contact Us</a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
